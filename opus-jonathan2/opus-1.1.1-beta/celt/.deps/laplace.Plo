@@ -1,0 +1,87 @@
+celt/laplace.lo celt/laplace.o: celt/laplace.c config.h celt/laplace.h \
+  celt/entenc.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stddef.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/_types.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/cdefs.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/machine/_types.h \
+  celt/entcode.h include/opus_types.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/stdint.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/machine/_stdint.h \
+  include/opus_defines.h include/opus_types.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/limits.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/syslimits.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/limits.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/limits.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/machine/_limits.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/syslimits.h \
+  celt/ecintrin.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/math.h \
+  celt/arch.h celt/entdec.h celt/mathops.h celt/os_support.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/string.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/_null.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/strings.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdio.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdarg.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdlib.h
+
+config.h:
+
+celt/laplace.h:
+
+celt/entenc.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stddef.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/_types.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/cdefs.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/machine/_types.h:
+
+celt/entcode.h:
+
+include/opus_types.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/stdint.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/machine/_stdint.h:
+
+include/opus_defines.h:
+
+include/opus_types.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/limits.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/syslimits.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/limits.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/limits.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/machine/_limits.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/syslimits.h:
+
+celt/ecintrin.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/math.h:
+
+celt/arch.h:
+
+celt/entdec.h:
+
+celt/mathops.h:
+
+celt/os_support.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/string.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/_null.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/strings.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdio.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdarg.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdlib.h:

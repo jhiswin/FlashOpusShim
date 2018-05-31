@@ -1,0 +1,8 @@
+[submodule "libopus"]
+	path = libopus
+	url = https://git.xiph.org/opus.git
+
+[submodule "opus-tools"]
+	path = opus-tools
+	url = https://git.xiph.org/opus-tools.git
+

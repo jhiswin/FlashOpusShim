@@ -1,0 +1,66 @@
+preprocess.lo preprocess.o: preprocess.c ../config.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/math.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/cdefs.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/_types.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/machine/_types.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/machine/_limits.h \
+  ../include/speex/speex_preprocess.h ../include/speex/speexdsp_types.h \
+  ../include/speex/speexdsp_config_types.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/stdint.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/machine/_stdint.h \
+  ../include/speex/speex_echo.h arch.h ../include/speex/speexdsp_types.h \
+  fftwrap.h filterbank.h math_approx.h os_support.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/string.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/_null.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/strings.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdio.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdarg.h \
+  /cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdlib.h
+
+../config.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/math.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/cdefs.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/_types.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/machine/_types.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/machine/_limits.h:
+
+../include/speex/speex_preprocess.h:
+
+../include/speex/speexdsp_types.h:
+
+../include/speex/speexdsp_config_types.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/stdint.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/machine/_stdint.h:
+
+../include/speex/speex_echo.h:
+
+arch.h:
+
+../include/speex/speexdsp_types.h:
+
+fftwrap.h:
+
+filterbank.h:
+
+math_approx.h:
+
+os_support.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/string.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/sys/_null.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/include/strings.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdio.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdarg.h:
+
+/cygdrive/d/CrossBridge_15.0.0.3/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdlib.h:

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>FlashOpusTest</title>
+	<meta name="description" content="" />
+	
+	<script src="js/swfobject.js"></script>
+	<script src="FlashOpusShim.js"></script>
+	
+	<script>
+		
+		window.mediaRecorder = null;
+		window.chunks 		 = [];
+		window.totalBlob	 = null;
+	
+		window.onclickRecord = function()
+		{
+			console.log("clicked record");
+			
+			microphonePermission();
+		
+			mediaRecorder.start(0);
+		}
+	
+		window.onclickStop = function()
+		{
+			console.log("clicked stop");
+		
+			mediaRecorder.stop();
+			
+			console.log(mediaRecorder.state);
+			console.log("recorder stopped");
+		}
+		
+		window.onclickPlay = function()
+		{
+			console.log("clicked play");
+			
+			if( window.audio ) 
+				window.audio.play();
+		}
+		
+		window.onclickPause = function()
+		{
+			console.log("clicked pause");
+			
+			if( window.audio ) 
+				window.audio.pause();
+		}
+		
+		window.onGetUserMediaError = function(err)
+		{
+			console.log('The following error occured: ' + err);
+		}
+	
+		window.onGetUserMediaSuccess = function(stream)
+		{
+			var options = {};
+			options.mimeType = "ogg/opus"; //done in js, or with flash
+			//options.mimeType = "raw/pcm"; //done with flash
+			
+			options.opusSecsAdd = 0.5;
+			
+			mediaRecorder = new MediaRecorder(stream, options);
+			mediaRecorder.onstop = onMediaRecorderStop;
+			mediaRecorder.onstart = onMediaRecorderStart;
+			mediaRecorder.ondataavailable = onMediaRecorderDataAvailable;
+			
+			document.getElementById("recordButton").onclick = onclickRecord;
+			document.getElementById("stopButton").onclick = onclickStop;
+			document.getElementById("playButton").onclick = onclickPlay;
+			document.getElementById("pauseButton").onclick = onclickPause;
+			
+			document.getElementById("webSocketSend").onclick = onclickWebSocketSend;
+			document.getElementById("requestSend").onclick = onclickRequestSend;
+		}
+	
+		navigator.getUserMedia =
+		(
+			/*navigator.getUserMedia ||
+            navigator.mozGetUserMedia ||
+            navigator.msGetUserMedia ||
+            navigator.webkitGetUserMedia || */
+			navigator.FlashOpusShim_GetUserMedia
+		);
+		
+		if( ! navigator.getUserMedia ) 
+			console.log('getUserMedia not supported.');
+		
+		else
+		{
+			console.log('getUserMedia is supported.');
+
+			var constraints = { audio: true };
+			
+			
+			navigator.getUserMedia(constraints, onGetUserMediaSuccess, onGetUserMediaError);
+		}
+
+		window.audio = null;
+		
+		window.onMediaRecorderStart = function(e)
+		{
+			console.log("media recorder start");
+		
+			document.getElementById("recordButton").style.background = "red";
+		}
+		
+		
+		
+		//'audio/ogg; codecs=opus'
+		window.onMediaRecorderStop = function(e)
+		{
+			console.log("media recorder stop");
+			
+			document.getElementById("recordButton").style.background = "";			
+
+			audio = new Audio();
+				
+			
+			
+			if( chunks.length > 0 && chunks[0].isShimBlob ) 
+				totalBlob = new ShimBlob(chunks, { 'type' : mediaRecorder.mimeType });
+			
+			else
+				totalBlob = new Blob(chunks, { 'type' :  mediaRecorder.mimeType });
+			
+			chunks = [];
+			
+			var audioURL = window.URL.createObjectURL(totalBlob);
+			audio.src = audioURL;
+			
+		}
+		
+		window.onMediaRecorderDataAvailable = function(e)
+		{
+			console.log("media recorder data");
+		
+			var b = e.data;
+			
+			if( b.size != 0 )
+			{
+				if( mediaRecorder.mimeType == "ogg/opus" && b.isShimBlob )  //if we intend to play in js rather than flash, convert the blobs as we go along, instead of at the end of recording.
+					b = b.Realize();
+					
+				chunks.push(b);
+			}
+		}
+		
+		var xhr = null;
+		
+		window.onclickRequestSend = function()
+		{
+			console.log("clicked request upload");
+			
+			if( ! totalBlob ) 
+				return;
+				
+			var uploadURL = document.getElementById("requestURL").value;
+			
+			xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = OnRequestStateChange;
+			xhr.open("POST", uploadURL);
+			
+			var fd = new ShimFormData();
+			fd.append("test1", "one");
+			fd.append("test2", "two");
+			fd.set("test3", "three");
+			fd.set("test4", totalBlob);
+			
+			//xhr.send(totalBlob);
+			xhr.send(fd);
+		}
+		
+		window.OnRequestStateChange = function()
+		{
+			var txt = null;
+			switch(xhr.readyState) {
+			case 0: txt = "UNSENT"; break;
+			case 2: txt = "OPENED"; break;
+			case 3: txt = "HEADERS_RECEIVED"; break;
+			case 4: txt = "LOADING"; break;
+			case 5: txt = "DONE"; break;
+			}
+			
+			document.getElementById("requestStatus").innerHTML = txt + " HTTP(" + xhr.status + ")";
+		}
+		
+		window.onclickWebSocketSend = function()
+		{
+			console.log("clicked web socket send");
+		
+			if( ! totalBlob ) 
+				return;
+			
+			var websocket_uri = document.getElementById('webSocketURL').value;
+   
+			var websocket = new WebSocket(websocket_uri);
+			
+			websocket.onopen    = WebSocketOnOpen;
+			websocket.onmessage = WebSocketOnMessage;
+		}
+		
+		window.WebSocketOnOpen = function()
+		{
+			document.getElementById("webSocketStatus").innerHTML = "Connected";
+			
+			if( ! totalBlob ) 
+				websocket.send(totalBlob);
+		}
+		
+		window.WebSocketOnClose = function()
+		{
+			document.getElementById("webSocketStatus").innerHTML = "Closed";
+		}
+			
+		window.WebSocketOnMessage = function(e)
+		{
+			document.getElementById("webSocketStatus").innerHTML = e.data;
+        }
+		
+	</script>
+	
+	<style>
+		html, body { height:100%; overflow:hidden; }
+		body { margin:0; }
+		
+		object { border: 1px dotted black; }
+	</style>
+	
+</head>
+<body>
+	
+	<h1>Flash Opus Test</h1>
+	
+	<div id="altContent">
+		<p><a href="http://www.adobe.com/go/getflashplayer">Get Adobe Flash player</a></p>
+	</div>
+	
+	<div>
+		<button id="micPermission" onclick="microphonePermission(true)">Microphone permission</button>
+	</div>
+	
+	<div>
+		<button id="recordButton">Record</button>
+		<button id="stopButton">Stop</button>
+		
+		<br/>
+		
+		<button id="playButton">Play</button>
+		<button id="pauseButton">Stop</button>
+	</div>
+	
+	<div>
+		WebSocket: <span id="webSocketStatus">Not connected</span>
+		
+		<input type="text" id="webSocketURL" size="50" value="ws://example.com:12345">
+		<button id="webSocketSend">Send By Websocket</button>
+	</div>
+	
+	<div>
+		XMLHttpRequest: <span id="requestStatus">Ready</span>
+		
+		<input type="text" id="requestURL" size="50" value="http://www.example.com/upload"/>
+		<button id="requestSend" >Upload Request</button>
+		
+	</div>
+	
+</body>
+</html>
+	
+	
+	

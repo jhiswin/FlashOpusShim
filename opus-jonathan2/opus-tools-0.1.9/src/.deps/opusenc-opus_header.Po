@@ -1,0 +1,78 @@
+src/opusenc-opus_header.o src/opusenc-opus_header.o: src/opus_header.c \
+  config.h src/opus_header.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/ogg/ogg.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stddef.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/_types.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/cdefs.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/machine/_types.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/ogg/os_types.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/ogg/config_types.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/inttypes.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/machine/_inttypes.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/stdint.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/machine/_stdint.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/stdint.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/sys/types.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/machine/endian.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/_pthreadtypes.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/select.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/_sigset.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/_timeval.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/timespec.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/string.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/_null.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/strings.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdio.h \
+  /cygdrive/c/crossbridge/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdarg.h
+
+config.h:
+
+src/opus_header.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/ogg/ogg.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stddef.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/_types.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/cdefs.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/machine/_types.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/ogg/os_types.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/ogg/config_types.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/inttypes.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/machine/_inttypes.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/stdint.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/machine/_stdint.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/stdint.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/sys/types.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/machine/endian.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/_pthreadtypes.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/select.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/_sigset.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/_timeval.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/timespec.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/string.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/sys/_null.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/include/strings.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdio.h:
+
+/cygdrive/c/crossbridge/sdk/usr/bin/../../usr/lib/avm2-unknown-freebsd8/4.2.1/include/stdarg.h:
